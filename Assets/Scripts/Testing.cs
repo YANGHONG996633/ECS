@@ -17,6 +17,7 @@ public class Testing : MonoBehaviour
         entityManager.CreateEntity(entityArchetype, entities);
         for (int i = 0; i < entities.Length; i++)
         {
+            entityManager.SetComponentData(entities[i],new Level{level =0});
             entityManager.SetComponentData(entities[i],new Translation{Value=new float3(Random.Range(0,100),Random.Range(0,100),Random.Range(0,100))});
         }
     }
